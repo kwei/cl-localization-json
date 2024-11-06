@@ -42,6 +42,7 @@ export const EditorSection = () => {
         const placeholder = formData.get(
           `${questionId}-option-${optionIndex}-placeholder`,
         ) as string;
+        const button = formData.get(`${questionId}-button`) as string;
         if (content) {
           newTemplate.questions[index].options[optionIndex].content = content;
         }
@@ -52,6 +53,9 @@ export const EditorSection = () => {
         if (placeholder) {
           newTemplate.questions[index].options[optionIndex].placeholder =
             placeholder;
+        }
+        if (button) {
+          newTemplate.questions[index].button.content = button;
         }
       });
     });
@@ -147,6 +151,20 @@ export const EditorSection = () => {
                     </fieldset>
                   ),
               )}
+              <fieldset
+                key={questionConfig.button.value}
+                className="w-ful rounded border border-solid border-foreground px-2 pb-2"
+              >
+                <legend className="rounded bg-background px-2 font-semibold">
+                  Button: {questionConfig.button.value}
+                </legend>
+                <input
+                  className="w-full bg-transparent px-2 py-1"
+                  type="text"
+                  name={`${questionConfig.questionId}-button`}
+                  defaultValue={questionConfig.button.content}
+                />
+              </fieldset>
             </div>
           </details>
         ))}
