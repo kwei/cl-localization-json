@@ -1,12 +1,13 @@
 'use client';
 
 import { useLocale } from '@/context/LocaleProvider';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { FormEvent } from 'react';
 
 export const EditorSection = () => {
   const { selection } = useLocale();
   const [template, setTemplate] = useState<Config>();
+  const formRef = useRef<HTMLFormElement>(null);
   const templateUrlRef = useRef<HTMLInputElement>(null);
 
   const handleGetTemplate = () => {
@@ -63,9 +64,14 @@ export const EditorSection = () => {
     anchorElement?.click();
   };
 
+  useEffect(() => {
+    formRef.current?.reset();
+  }, [selection]);
+
   return (
     <form
       key={selection}
+      ref={formRef}
       onSubmit={handleSubmit}
       className="flex h-full w-full flex-col"
     >
