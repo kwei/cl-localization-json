@@ -41,11 +41,17 @@ export const EditorSection = () => {
         const placeholder = formData.get(
           `${questionId}-option-${optionIndex}-placeholder`,
         ) as string;
-        newTemplate.questions[index].options[optionIndex].content = content;
-        newTemplate.questions[index].options[optionIndex].description =
-          description;
-        newTemplate.questions[index].options[optionIndex].placeholder =
-          placeholder;
+        if (content) {
+          newTemplate.questions[index].options[optionIndex].content = content;
+        }
+        if (description) {
+          newTemplate.questions[index].options[optionIndex].description =
+            description;
+        }
+        if (placeholder) {
+          newTemplate.questions[index].options[optionIndex].placeholder =
+            placeholder;
+        }
       });
     });
     const dataStr =
