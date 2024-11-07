@@ -17,13 +17,13 @@ export const LocaleButton = (props: Props) => {
 
   const handleSelect = useCallback(() => {
     setSelection(value);
-  }, [value]);
+  }, [value, setSelection]);
 
   return (
     <div className={`locale-btn ${isSelected ? 'active' : ''}`}>
       <button
         onClick={handleSelect}
-        className="flex flex-1 items-center justify-between p-2 text-left font-semibold"
+        className="flex flex-1 items-center justify-between p-4 text-left font-semibold"
       >
         <span>{label}</span>
         <ArrowRightIcon alt="choose" />

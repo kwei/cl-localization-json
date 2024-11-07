@@ -8,9 +8,12 @@ body {
 }
 
 .locale-btn {
-    @apply flex w-full items-center gap-4 rounded-md border border-solid border-foreground bg-background p-2 transition-all;
+    @apply flex w-full items-center gap-4 rounded-md border border-solid border-foreground bg-background transition-all;
+    @apply hover:scale-105;
+    z-index: 1;
 }
 
 .locale-btn.active {
-    box-shadow: 4px 2px 4px 0 #1A1A1A;
+    @apply scale-105;
+    box-shadow: 0 0 8px 0 #1A1A1A;
 }

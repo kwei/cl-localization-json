@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="sticky top-0 w-full p-4">
+        <div className="w-full p-4">
           <Header />
         </div>
         {children}
