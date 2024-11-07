@@ -119,6 +119,13 @@ export const EditorSection = ({ selection }: { selection: string }) => {
                   name={`${questionConfig.questionId}-button`}
                   defaultValue={questionConfig.button.content}
                 />
+                {questionConfig.backButton && (
+                  <InputSection
+                    label="Back Button"
+                    name={`${questionConfig.questionId}-backButton`}
+                    defaultValue={questionConfig.backButton.content}
+                  />
+                )}
               </fieldset>
             </div>
           </Accordion>

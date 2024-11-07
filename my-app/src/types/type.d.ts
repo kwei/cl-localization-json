@@ -15,6 +15,10 @@ interface Question {
 		value: string; // This is used for tracking.
 		content: string; // This is localized.
 	};
+	backButton?: {
+		value: string; // This is used for tracking.
+		content: string; // This is localized.
+	};
 }
 
 type Option = {

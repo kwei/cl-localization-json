@@ -17,6 +17,7 @@ export const retrieveFormData = (template: Config, formData: FormData) => {
         `${questionId}-option-${optionIndex}-placeholder`,
       ) as string;
       const button = formData.get(`${questionId}-button`) as string;
+      const backButton = formData.get(`${questionId}-backButton`) as string;
       const type = formData.get(`${questionId}-type`) as
         | 'singleChoice'
         | 'multipleChoice';
@@ -35,6 +36,9 @@ export const retrieveFormData = (template: Config, formData: FormData) => {
       }
       if (button) {
         newTemplate.questions[index].button.content = button;
+      }
+      if (backButton && newTemplate.questions[index].backButton) {
+        newTemplate.questions[index].backButton.content = backButton;
       }
       if (type) {
         newTemplate.questions[index].type = type;
