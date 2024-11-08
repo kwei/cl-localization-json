@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    font-family: "Segoe UI", sans-serif;
+}
+
+html, body {
+    overflow: hidden;
+}
+
 body {
-    @apply w-full min-h-screen bg-background text-foreground;
+    @apply w-full min-h-screen max-h-screen bg-background text-foreground flex flex-col;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -16,4 +24,32 @@ body {
 .locale-btn.active {
     @apply scale-105;
     box-shadow: 0 0 8px 0 #1A1A1A;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.scrollbar::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.20);
+    opacity: 0.3;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(176, 176, 176, 0.3);
 }

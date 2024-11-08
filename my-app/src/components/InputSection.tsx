@@ -1,6 +1,9 @@
+import { HTMLInputTypeAttribute } from 'react';
+
 interface Props {
   label: string;
   name: string;
+  type?: HTMLInputTypeAttribute;
   defaultValue: string;
 }
 
@@ -12,7 +15,7 @@ export const InputSection = (props: Props) => {
       </span>
       <input
         className="w-full border-b border-solid border-foreground bg-transparent px-2 py-1"
-        type="text"
+        type={props.type ?? 'text'}
         name={props.name}
         defaultValue={props.defaultValue}
       />

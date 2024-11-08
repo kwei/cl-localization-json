@@ -22,7 +22,34 @@ export const retrieveFormData = (template: Config, formData: FormData) => {
         | 'singleChoice'
         | 'multipleChoice';
       const column = formData.get(`${questionId}-column`) as '3' | '4';
+      const surveyId = formData.get('surveyId') as string;
+      const width = formData.get('theme-width') as string;
+      const bgColor = formData.get('theme-general-bgColor') as string;
+      const bgColorHeader = formData.get(
+        'theme-general-caption-bgColor',
+      ) as string;
+      const primaryFontColor = formData.get(
+        'theme-general-primary-font-color',
+      ) as string;
+      const secondaryFontColor = formData.get(
+        'theme-general-secondary-font-color',
+      ) as string;
 
+      if (width) {
+        newTemplate.theme.width = width;
+      }
+      if (bgColor) {
+        newTemplate.theme.general.bgColor = bgColor;
+      }
+      if (bgColorHeader) {
+        newTemplate.theme.general.bgColorHeader = bgColorHeader;
+      }
+      if (primaryFontColor) {
+        newTemplate.theme.general.primaryFontColor = primaryFontColor;
+      }
+      if (secondaryFontColor) {
+        newTemplate.theme.general.secondaryFontColor = secondaryFontColor;
+      }
       if (content) {
         newTemplate.questions[index].options[optionIndex].content = content;
       }
@@ -45,6 +72,9 @@ export const retrieveFormData = (template: Config, formData: FormData) => {
       }
       if (column) {
         newTemplate.questions[index].column = Number(column);
+      }
+      if (surveyId) {
+        newTemplate.surveyId = surveyId;
       }
     });
   });

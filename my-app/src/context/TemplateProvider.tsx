@@ -4,8 +4,8 @@ import {
   ChangeEvent,
   createContext,
   ReactNode,
-  useCallback,
   useContext,
+  useEffect,
   useState,
 } from 'react';
 
@@ -20,7 +20,7 @@ export const TemplateProvider = ({ children }: { children: ReactNode }) => {
     setSurveyId(surveyId);
   };
 
-  const handleGetTemplate = useCallback(() => {
+  useEffect(() => {
     const templateUrl = `https://web-static-stage.cyberlink.com/app/survey/config/${surveyId}/${selection}.json`;
     setCurrentTemplateLocale(selection);
     if (templateUrl) {
@@ -44,13 +44,6 @@ export const TemplateProvider = ({ children }: { children: ReactNode }) => {
             value={surveyId}
             onChange={handleInputSurveyId}
           />
-          <button
-            type="button"
-            onClick={handleGetTemplate}
-            className="rounded border border-solid border-foreground px-6 py-1 transition-all hover:scale-105"
-          >
-            Get Template
-          </button>
         </div>
         <div className="flex w-full items-center gap-2 p-2">
           <span className="font-semibold">Current Template:</span>
@@ -67,7 +60,7 @@ export const TemplateProvider = ({ children }: { children: ReactNode }) => {
           </a>
         </div>
       </div>
-      <div className="w-full py-4">{children}</div>
+      <div className="relative w-full flex-1 py-4">{children}</div>
     </Ctx.Provider>
   );
 };

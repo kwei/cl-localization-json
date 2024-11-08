@@ -1,8 +1,9 @@
 'use client';
 
-import { Accordion } from '@/components/Accordion';
 import { InputSection } from '@/components/InputSection';
-import { RadioButtonSection } from '@/components/RadioButtonSection';
+import { QuestionEditorSection } from '@/components/QuestionEditorSection';
+import { QuestionOptionEditorSection } from '@/components/QuestionOptionEditorSection';
+import { ThemeEditorSection } from '@/components/ThemeEditorSection';
 import { useTemplate } from '@/context/TemplateProvider';
 import { retrieveFormData } from '@/utils/retrieveFormData';
 import { useEffect, useRef } from 'react';
@@ -37,98 +38,24 @@ export const EditorSection = ({ selection }: { selection: string }) => {
       className="flex h-full w-full flex-col"
     >
       <div className="flex w-full flex-col gap-2 px-4">
+        {template && (
+          <InputSection
+            label="New Survey ID"
+            name="surveyId"
+            defaultValue={template.surveyId}
+          />
+        )}
+        {template?.theme && <ThemeEditorSection theme={template.theme} />}
         {template?.questions.map((questionConfig) => (
-          <Accordion
+          <QuestionEditorSection
             key={questionConfig.questionId}
-            className="w-full rounded-xl bg-gradient-to-r from-gray-300/10 to-gray-300/10 p-4 shadow-lg"
-            label={`Question: ${questionConfig.questionId}`}
+            questionConfig={questionConfig}
           >
-            <div className="flex w-full flex-col gap-2 pt-4">
-              <InputSection
-                label="Title"
-                name={`${questionConfig.questionId}-question`}
-                defaultValue={questionConfig.question}
-              />
-              <InputSection
-                label="Description"
-                name={`${questionConfig.questionId}-description`}
-                defaultValue={questionConfig.description}
-              />
-              <RadioButtonSection
-                label="Type"
-                name={`${questionConfig.questionId}-type`}
-                defaultChecked={questionConfig.type}
-                options={[
-                  { label: 'singleChoice', value: 'singleChoice' },
-                  { label: 'multipleChoice', value: 'multipleChoice' },
-                ]}
-              />
-              <RadioButtonSection
-                label="Column"
-                name={`${questionConfig.questionId}-column`}
-                defaultChecked={questionConfig.column}
-                options={[
-                  { label: '3', value: 3 },
-                  { label: '4', value: 4 },
-                ]}
-              />
-              <fieldset className="flex w-full flex-col gap-2 rounded border border-solid border-foreground px-4 pb-2">
-                <legend className="px-2 text-lg">Option Section</legend>
-                {questionConfig.options.map(
-                  (optionConfig, index) =>
-                    (optionConfig.content || optionConfig.description) && (
-                      <ul
-                        key={`${questionConfig.questionId}-option-${optionConfig.value}`}
-                        className="list-disc py-2"
-                      >
-                        <label className="font-bold">
-                          {optionConfig.value}
-                        </label>
-                        {optionConfig.content && (
-                          <li className="ml-6">
-                            <InputSection
-                              label="Title"
-                              name={`${questionConfig.questionId}-option-${index}-content`}
-                              defaultValue={optionConfig.content}
-                            />
-                          </li>
-                        )}
-                        {optionConfig.description && (
-                          <li className="ml-6">
-                            <InputSection
-                              label="Desc"
-                              name={`${questionConfig.questionId}-option-${index}-description`}
-                              defaultValue={optionConfig.description}
-                            />
-                          </li>
-                        )}
-                        {optionConfig.placeholder && (
-                          <li className="ml-6">
-                            <InputSection
-                              label="Placeholder"
-                              name={`${questionConfig.questionId}-option-${index}-placeholder`}
-                              defaultValue={optionConfig.placeholder}
-                            />
-                          </li>
-                        )}
-                      </ul>
-                    ),
-                )}
-                <InputSection
-                  label="Button"
-                  name={`${questionConfig.questionId}-button`}
-                  defaultValue={questionConfig.button.content}
-                />
-                {questionConfig.backButton && (
-                  <InputSection
-                    label="Back Button"
-                    name={`${questionConfig.questionId}-backButton`}
-                    defaultValue={questionConfig.backButton.content}
-                  />
-                )}
-              </fieldset>
-            </div>
-          </Accordion>
+            <QuestionOptionEditorSection
+              questionId={questionConfig.questionId}
+              options={questionConfig.options}
+            />
+          </QuestionEditorSection>
         ))}
       </div>
 
