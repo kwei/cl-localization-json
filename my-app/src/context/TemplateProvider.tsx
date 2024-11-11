@@ -35,7 +35,7 @@ export const TemplateProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <Ctx.Provider value={{ template }}>
-      <div className="flex w-full flex-col gap-2">
+      <div className="flex w-full flex-col gap-2 px-8">
         <div className="flex w-full items-center gap-2 p-2">
           <span className="font-semibold">Survey ID</span>
           <input
@@ -60,7 +60,7 @@ export const TemplateProvider = ({ children }: { children: ReactNode }) => {
           </a>
         </div>
       </div>
-      <div className="relative w-full flex-1 py-4">{children}</div>
+      <div className="relative w-full flex-1">{children}</div>
     </Ctx.Provider>
   );
 };

@@ -47,6 +47,96 @@ export const ThemeEditorSection = ({ theme }: { theme: Theme }) => {
                 />
               </li>
             </ul>
+            <label className="font-semibold">Option Styles</label>
+            <ul className="flex w-full list-disc flex-col gap-2">
+              <li className="ml-6">
+                <ColorSelector
+                  label="Background Color(Default)"
+                  name="theme-option-bgColor"
+                  defaultValue={theme.options.bgColor}
+                />
+              </li>
+              <li className="ml-6">
+                <InputSection
+                  label="Background Color(Hover)"
+                  name="theme-option-hover-bgColor"
+                  defaultValue={theme.options.bgColorHover}
+                />
+              </li>
+              <li className="ml-6">
+                <InputSection
+                  label="Background Color(Active)"
+                  name="theme-option-active-bgColor"
+                  defaultValue={theme.options.bgColorActive}
+                />
+              </li>
+              <li className="ml-6">
+                <ColorSelector
+                  label="Border Color(Default)"
+                  name="theme-option-border-color"
+                  defaultValue={theme.options.border}
+                />
+              </li>
+              <li className="ml-6">
+                <ColorSelector
+                  label="Border Color(Hover)"
+                  name="theme-option-hover-border-color"
+                  defaultValue={theme.options.borderHover}
+                />
+              </li>
+              <li className="ml-6">
+                <ColorSelector
+                  label="Border Color(Active)"
+                  name="theme-option-active-border-color"
+                  defaultValue={theme.options.borderActive}
+                />
+              </li>
+              <li className="ml-6">
+                <ColorSelector
+                  label="Primary Font Color"
+                  name="theme-option-primary-font-color"
+                  defaultValue={theme.options.primaryFontColor}
+                />
+              </li>
+              <li className="ml-6">
+                <ColorSelector
+                  label="Primary Font Color(Active)"
+                  name="theme-option-active-primary-font-color"
+                  defaultValue={theme.options.primaryFontColorActive}
+                />
+              </li>
+              <li className="ml-6">
+                <ColorSelector
+                  label="Secondary Font Color"
+                  name="theme-option-secondary-font-color"
+                  defaultValue={theme.options.secondaryFontColor}
+                />
+              </li>
+              <li className="ml-6">
+                <ColorSelector
+                  label="Secondary Font Color(Active)"
+                  name="theme-option-active-secondary-font-color"
+                  defaultValue={theme.options.secondaryFontColorActive}
+                />
+              </li>
+            </ul>
+            <label className="font-semibold">Button Styles</label>
+            <ul className="flex w-full list-disc flex-col gap-2">
+              <li className="ml-6">
+                <ColorSelector
+                  label="Background Color"
+                  name="theme-button-bgColor"
+                  defaultValue={theme.buttons.bgColor}
+                />
+              </li>
+              <li className="ml-6">
+                <ColorSelector
+                  label="Primary Font Color"
+                  name="theme-button-primary-font-color"
+                  defaultValue={theme.buttons.primaryFontColor}
+                />
+              </li>
+            </ul>
           </>
         )}
       </div>

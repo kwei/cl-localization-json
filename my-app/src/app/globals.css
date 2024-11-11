@@ -6,12 +6,8 @@
     font-family: "Segoe UI", sans-serif;
 }
 
-html, body {
-    overflow: hidden;
-}
-
 body {
-    @apply w-full min-h-screen max-h-screen bg-background text-foreground flex flex-col;
+    @apply w-full min-h-screen max-h-screen bg-background text-foreground flex flex-col overflow-y-auto;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -28,7 +24,6 @@ body {
 
 .scrollbar::-webkit-scrollbar {
     width: 6px;
-    height: 6px;
 }
 
 .scrollbar::-webkit-scrollbar-track {

@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98ca40c4-25ac-4af3-91fb-091f687a58cf" name="Changes" comment="Add Back Button">
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/ColorSelector.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/QuestionEditorSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/QuestionOptionEditorSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/ThemeEditorSection.tsx" afterDir="false" />
+    <list default="true" id="98ca40c4-25ac-4af3-91fb-091f687a58cf" name="Changes" comment="Add theme editor">
+      <change afterPath="$PROJECT_DIR$/my-app/src/components/EditorTemplate.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/components/FormContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/EditorSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/EditorSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/InputSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/InputSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/EditorContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/EditorContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/EditorSection.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/ThemeEditorSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ThemeEditorSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/context/TemplateProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/context/TemplateProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/types/type.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/types/type.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/utils/retrieveFormData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/utils/retrieveFormData.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +113,7 @@
       <updated>1730791066844</updated>
       <workItem from="1730791067970" duration="19123000" />
       <workItem from="1730946958061" duration="70000" />
-      <workItem from="1730947626557" duration="19814000" />
+      <workItem from="1730947626557" duration="27440000" />
     </task>
     <task id="LOCAL-00001" summary="version 1">
       <option name="closed" value="true" />
@@ -173,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730973291526</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add theme editor">
+      <option name="closed" value="true" />
+      <created>1731047945079</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731047945079</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +194,7 @@
     <MESSAGE value="Add Button Content Editor" />
     <MESSAGE value="Modify UI and functions" />
     <MESSAGE value="Add Back Button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Back Button" />
+    <MESSAGE value="Add theme editor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add theme editor" />
   </component>
 </project>
