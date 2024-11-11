@@ -14,7 +14,10 @@ export const FormContainer = ({ children }: { children: ReactNode }) => {
       event.preventDefault();
       const formData = new FormData(event.target as HTMLFormElement);
       if (!template) return;
-      const newTemplate: Config = retrieveFormData(template, formData);
+      const newTemplate: Config = retrieveFormData(
+        template[selection],
+        formData,
+      );
       const dataStr =
         'data:text/json;charset=utf-8,' +
         encodeURIComponent(JSON.stringify(newTemplate, undefined, 2));

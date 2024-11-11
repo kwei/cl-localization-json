@@ -9,12 +9,12 @@ export const EditorContainer = () => {
   const { selection } = useLocale();
   const { template } = useTemplate();
 
-  if (!template) return null;
+  if (!template || !template[selection]) return null;
   return LOCALES.map((locale) => (
     <EditorTemplate
-      key={locale}
+      key={`${template.surveyId}-${locale}`}
       show={selection === locale}
-      template={template}
+      template={template[locale]}
     />
   ));
 };

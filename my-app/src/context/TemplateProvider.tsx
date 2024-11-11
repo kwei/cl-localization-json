@@ -1,5 +1,6 @@
 'use client';
 import { useLocale } from '@/context/LocaleProvider';
+import { LOCALES } from '@/utils/constants';
 import {
   ChangeEvent,
   createContext,
@@ -12,26 +13,40 @@ import {
 export const TemplateProvider = ({ children }: { children: ReactNode }) => {
   const { selection } = useLocale();
   const [surveyId, setSurveyId] = useState('1bJ8kLz9Xd');
-  const [template, setTemplate] = useState<Config>();
-  const [currentTemplateLocale, setCurrentTemplateLocale] = useState(selection);
+  const [template, setTemplate] = useState<Record<string, Config>>();
 
   const handleInputSurveyId = (event: ChangeEvent) => {
     const surveyId = (event.target as HTMLInputElement).value;
     setSurveyId(surveyId);
   };
 
-  useEffect(() => {
-    const templateUrl = `https://web-static-stage.cyberlink.com/app/survey/config/${surveyId}/${selection}.json`;
-    setCurrentTemplateLocale(selection);
-    if (templateUrl) {
-      fetch(templateUrl)
+  const getAllTemplates = async (surveyId: string) => {
+    const result: Record<string, Config> = {};
+    const promises = LOCALES.map(async (locale) => {
+      const templateUrl = `https://web-static-stage.cyberlink.com/app/survey/config/${surveyId}/${locale}.json`;
+      return fetch(templateUrl)
         .then((res) => res.json())
-        .then((data) => {
-          setTemplate(data);
-          setSurveyId(data.surveyId);
-        });
+        .then((res) => res as Config);
+    });
+    await Promise.all(promises).then((data) => {
+      LOCALES.forEach((locale, index) => {
+        result[locale] = data[index];
+      });
+    });
+    setTemplate(result);
+  };
+
+  useEffect(() => {
+    if (surveyId) {
+      getAllTemplates(surveyId).then();
     }
-  }, [surveyId, selection]);
+  }, [surveyId]);
+
+  useEffect(() => {
+    if (template) {
+      setSurveyId(template[selection].surveyId);
+    }
+  }, [selection]);
 
   return (
     <Ctx.Provider value={{ template }}>
@@ -49,13 +64,13 @@ export const TemplateProvider = ({ children }: { children: ReactNode }) => {
           <span className="font-semibold">Current Template:</span>
           <a
             href={
-              template
-                ? `https://web-static-stage.cyberlink.com/app/survey/config/${template.surveyId}/${currentTemplateLocale}.json`
+              template && template[selection]
+                ? `https://web-static-stage.cyberlink.com/app/survey/config/${template[selection].surveyId}/${selection}.json`
                 : undefined
             }
           >
-            {template
-              ? `https://web-static-stage.cyberlink.com/app/survey/config/${template.surveyId}/${currentTemplateLocale}.json`
+            {template && template[selection]
+              ? `https://web-static-stage.cyberlink.com/app/survey/config/${template[selection].surveyId}/${selection}.json`
               : 'N/A'}
           </a>
         </div>
@@ -66,7 +81,7 @@ export const TemplateProvider = ({ children }: { children: ReactNode }) => {
 };
 
 const Ctx = createContext<{
-  template?: Config;
+  template?: Record<string, Config>;
 }>({});
 
 export const useTemplate = () => useContext(Ctx);
