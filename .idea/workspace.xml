@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98ca40c4-25ac-4af3-91fb-091f687a58cf" name="Changes" comment="Add more theme content">
+    <list default="true" id="98ca40c4-25ac-4af3-91fb-091f687a58cf" name="Changes" comment="Refine UI">
+      <change afterPath="$PROJECT_DIR$/my-app/src/hooks/useMajorInfo.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/utils/Store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/FormContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/FormContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/context/TemplateProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/context/TemplateProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/LocaleButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/LocaleButton.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,7 @@
     "npm.dev.executor": "Run",
     "npm.lint.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\kw_yeh\\Desktop\\cl-localization-json\\my-app\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.customizations",
     "ts.external.directory.path": "C:\\Users\\kw_yeh\\Desktop\\cl-localization-json\\my-app\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -119,7 +119,7 @@
       <updated>1730791066844</updated>
       <workItem from="1730791067970" duration="19123000" />
       <workItem from="1730946958061" duration="70000" />
-      <workItem from="1730947626557" duration="27887000" />
+      <workItem from="1730947626557" duration="30993000" />
     </task>
     <task id="LOCAL-00001" summary="version 1">
       <option name="closed" value="true" />
@@ -193,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731308206691</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Refine UI">
+      <option name="closed" value="true" />
+      <created>1731308526124</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731308526124</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +218,7 @@
     <MESSAGE value="Add Back Button" />
     <MESSAGE value="Add theme editor" />
     <MESSAGE value="Add more theme content" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add more theme content" />
+    <MESSAGE value="Refine UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refine UI" />
   </component>
 </project>

@@ -22,6 +22,7 @@ export const LocaleButton = (props: Props) => {
   return (
     <div className={`locale-btn ${isSelected ? 'active' : ''}`}>
       <button
+        type="button"
         onClick={handleSelect}
         className="flex flex-1 items-center justify-between p-4 text-left font-semibold"
       >
