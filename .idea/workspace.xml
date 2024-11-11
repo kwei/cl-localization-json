@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98ca40c4-25ac-4af3-91fb-091f687a58cf" name="Changes" comment="Add theme editor">
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/EditorTemplate.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/FormContainer.tsx" afterDir="false" />
+    <list default="true" id="98ca40c4-25ac-4af3-91fb-091f687a58cf" name="Changes" comment="Add more theme content">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/EditorContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/EditorContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/EditorSection.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/ThemeEditorSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ThemeEditorSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/FormContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/FormContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/context/TemplateProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/context/TemplateProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/utils/retrieveFormData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/utils/retrieveFormData.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,30 +29,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kw_yeh/Desktop/cl-localization-json/my-app/src/components&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\kw_yeh\\Desktop\\cl-localization-json\\my-app\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\kw_yeh\\Desktop\\cl-localization-json\\my-app\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "ignore_missing_gitignore": "true",
+    "last_opened_file_path": "C:/Users/kw_yeh/Desktop/cl-localization-json/my-app/src/components",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.lint.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\kw_yeh\\Desktop\\cl-localization-json\\my-app\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\kw_yeh\\Desktop\\cl-localization-json\\my-app\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kw_yeh\Desktop\cl-localization-json\my-app\src\components" />
@@ -68,7 +63,7 @@
       <recent name="C:\Users\kw_yeh\Desktop\cl-localization-json\my-app\src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/my-app/package.json" />
       <command value="run" />
@@ -89,10 +84,21 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/my-app/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.lint" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -113,7 +119,7 @@
       <updated>1730791066844</updated>
       <workItem from="1730791067970" duration="19123000" />
       <workItem from="1730946958061" duration="70000" />
-      <workItem from="1730947626557" duration="27440000" />
+      <workItem from="1730947626557" duration="27887000" />
     </task>
     <task id="LOCAL-00001" summary="version 1">
       <option name="closed" value="true" />
@@ -179,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731047945079</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add more theme content">
+      <option name="closed" value="true" />
+      <created>1731308206691</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731308206691</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +209,7 @@
     <MESSAGE value="Modify UI and functions" />
     <MESSAGE value="Add Back Button" />
     <MESSAGE value="Add theme editor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add theme editor" />
+    <MESSAGE value="Add more theme content" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add more theme content" />
   </component>
 </project>

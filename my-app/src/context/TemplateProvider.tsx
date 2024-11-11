@@ -60,7 +60,7 @@ export const TemplateProvider = ({ children }: { children: ReactNode }) => {
           </a>
         </div>
       </div>
-      <div className="relative w-full flex-1">{children}</div>
+      <div className="flex w-full flex-1 flex-col">{children}</div>
     </Ctx.Provider>
   );
 };

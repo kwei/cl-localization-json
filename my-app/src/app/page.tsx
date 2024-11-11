@@ -25,13 +25,15 @@ export default function Home() {
                 <EditorContainer />
               </div>
             </div>
-            <div className="sticky bottom-0 flex w-full flex-1 items-end justify-end border-t border-solid border-gray-500 bg-background px-2 py-4">
-              <button
-                type="submit"
-                className="rounded-md bg-green-500 px-6 py-2 font-bold transition-all hover:scale-105"
-              >
-                Generate
-              </button>
+            <div className="sticky bottom-0 flex w-full flex-1 items-end">
+              <div className="flex w-full items-center justify-end border-t border-solid border-gray-500 bg-background px-8 py-4">
+                <button
+                  type="submit"
+                  className="rounded-md bg-green-500 px-6 py-2 font-bold transition-all hover:scale-105"
+                >
+                  Generate
+                </button>
+              </div>
             </div>
           </FormContainer>
         </TemplateProvider>

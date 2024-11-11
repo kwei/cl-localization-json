@@ -27,7 +27,7 @@ export const FormContainer = ({ children }: { children: ReactNode }) => {
   );
 
   return (
-    <form onSubmit={handleSubmit} className="flex h-full w-full flex-col">
+    <form onSubmit={handleSubmit} className="flex w-full flex-1 flex-col">
       {children}
       <a id="hidden-download-btn" className="hidden"></a>
     </form>
