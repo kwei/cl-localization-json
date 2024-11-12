@@ -14,7 +14,7 @@ export const EditorTemplate = ({
 }) => {
   return (
     <div
-      className={`flex w-full flex-col gap-2 px-4 pb-4 ${show ? 'visible' : 'invisible'}`}
+      className={`flex w-full flex-col gap-2 px-4 pb-4 ${show ? '' : 'hidden'}`}
     >
       {template && (
         <InputSection
@@ -23,7 +23,9 @@ export const EditorTemplate = ({
           defaultValue={template.surveyId}
         />
       )}
-      {template?.theme && <ThemeEditorSection theme={template.theme} locale={locale} />}
+      {template?.theme && (
+        <ThemeEditorSection theme={template.theme} locale={locale} />
+      )}
       {template?.questions.map((questionConfig) => (
         <QuestionEditorSection
           key={questionConfig.questionId}

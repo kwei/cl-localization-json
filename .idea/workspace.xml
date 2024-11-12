@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98ca40c4-25ac-4af3-91fb-091f687a58cf" name="Changes" comment="Add generate all button">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/EditorContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/EditorContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/EditorTemplate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/EditorTemplate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/FormContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/FormContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/QuestionEditorSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/QuestionEditorSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/QuestionOptionEditorSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/QuestionOptionEditorSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/ThemeEditorSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ThemeEditorSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/utils/retrieveFormData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/utils/retrieveFormData.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +116,7 @@
       <updated>1730791066844</updated>
       <workItem from="1730791067970" duration="19123000" />
       <workItem from="1730946958061" duration="70000" />
-      <workItem from="1730947626557" duration="39640000" />
+      <workItem from="1730947626557" duration="39816000" />
     </task>
     <task id="LOCAL-00001" summary="version 1">
       <option name="closed" value="true" />
@@ -222,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731316844644</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add generate all button">
+      <option name="closed" value="true" />
+      <created>1731397028008</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731397028008</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
