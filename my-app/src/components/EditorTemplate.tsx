@@ -5,35 +5,38 @@ import { ThemeEditorSection } from '@/components/ThemeEditorSection';
 
 export const EditorTemplate = ({
   show,
+  locale,
   template,
 }: {
   show: boolean;
+  locale: string;
   template: Config;
 }) => {
-  if (!show) return null;
   return (
-    <>
-      <div className="flex w-full flex-col gap-2 px-4 pb-4">
-        {template && (
-          <InputSection
-            label="New Survey ID"
-            name="surveyId"
-            defaultValue={template.surveyId}
+    <div
+      className={`flex w-full flex-col gap-2 px-4 pb-4 ${show ? 'visible' : 'invisible'}`}
+    >
+      {template && (
+        <InputSection
+          label="New Survey ID"
+          name={`surveyId-${locale}`}
+          defaultValue={template.surveyId}
+        />
+      )}
+      {template?.theme && <ThemeEditorSection theme={template.theme} locale={locale} />}
+      {template?.questions.map((questionConfig) => (
+        <QuestionEditorSection
+          key={questionConfig.questionId}
+          questionConfig={questionConfig}
+          locale={locale}
+        >
+          <QuestionOptionEditorSection
+            questionId={questionConfig.questionId}
+            options={questionConfig.options}
+            locale={locale}
           />
-        )}
-        {template?.theme && <ThemeEditorSection theme={template.theme} />}
-        {template?.questions.map((questionConfig) => (
-          <QuestionEditorSection
-            key={questionConfig.questionId}
-            questionConfig={questionConfig}
-          >
-            <QuestionOptionEditorSection
-              questionId={questionConfig.questionId}
-              options={questionConfig.options}
-            />
-          </QuestionEditorSection>
-        ))}
-      </div>
-    </>
+        </QuestionEditorSection>
+      ))}
+    </div>
   );
 };

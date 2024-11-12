@@ -2,7 +2,13 @@ import { Accordion } from '@/components/Accordion';
 import { ColorSelector } from '@/components/ColorSelector';
 import { InputSection } from '@/components/InputSection';
 
-export const ThemeEditorSection = ({ theme }: { theme: Theme }) => {
+export const ThemeEditorSection = ({
+  theme,
+  locale,
+}: {
+  theme: Theme;
+  locale: string;
+}) => {
   return (
     <Accordion
       label="Styles"
@@ -13,7 +19,7 @@ export const ThemeEditorSection = ({ theme }: { theme: Theme }) => {
           <>
             <InputSection
               label="Width"
-              name="theme-width"
+              name={`theme-width-${locale}`}
               defaultValue={theme.width}
             />
             <label className="font-semibold">General Styles</label>
@@ -21,28 +27,28 @@ export const ThemeEditorSection = ({ theme }: { theme: Theme }) => {
               <li className="ml-6">
                 <ColorSelector
                   label="Background Color"
-                  name="theme-general-bgColor"
+                  name={`theme-general-bgColor-${locale}`}
                   defaultValue={theme.general.bgColor}
                 />
               </li>
               <li className="ml-6">
                 <ColorSelector
                   label="Caption Background Color"
-                  name="theme-general-caption-bgColor"
+                  name={`theme-general-caption-bgColor-${locale}`}
                   defaultValue={theme.general.bgColorHeader}
                 />
               </li>
               <li className="ml-6">
                 <ColorSelector
                   label="Primary Font Color"
-                  name="theme-general-primary-font-color"
+                  name={`theme-general-primary-font-color-${locale}`}
                   defaultValue={theme.general.primaryFontColor}
                 />
               </li>
               <li className="ml-6">
                 <ColorSelector
                   label="Secondary Font Color"
-                  name="theme-general-secondary-font-color"
+                  name={`theme-general-secondary-font-color-${locale}`}
                   defaultValue={theme.general.secondaryFontColor}
                 />
               </li>
@@ -52,70 +58,70 @@ export const ThemeEditorSection = ({ theme }: { theme: Theme }) => {
               <li className="ml-6">
                 <ColorSelector
                   label="Background Color(Default)"
-                  name="theme-option-bgColor"
+                  name={`theme-option-bgColor-${locale}`}
                   defaultValue={theme.options.bgColor}
                 />
               </li>
               <li className="ml-6">
                 <InputSection
                   label="Background Color(Hover)"
-                  name="theme-option-hover-bgColor"
+                  name={`theme-option-hover-bgColor-${locale}`}
                   defaultValue={theme.options.bgColorHover}
                 />
               </li>
               <li className="ml-6">
                 <InputSection
                   label="Background Color(Active)"
-                  name="theme-option-active-bgColor"
+                  name={`theme-option-active-bgColor-${locale}`}
                   defaultValue={theme.options.bgColorActive}
                 />
               </li>
               <li className="ml-6">
                 <ColorSelector
                   label="Border Color(Default)"
-                  name="theme-option-border-color"
+                  name={`theme-option-border-color-${locale}`}
                   defaultValue={theme.options.border}
                 />
               </li>
               <li className="ml-6">
                 <ColorSelector
                   label="Border Color(Hover)"
-                  name="theme-option-hover-border-color"
+                  name={`theme-option-hover-border-color-${locale}`}
                   defaultValue={theme.options.borderHover}
                 />
               </li>
               <li className="ml-6">
                 <ColorSelector
                   label="Border Color(Active)"
-                  name="theme-option-active-border-color"
+                  name={`theme-option-active-border-color-${locale}`}
                   defaultValue={theme.options.borderActive}
                 />
               </li>
               <li className="ml-6">
                 <ColorSelector
                   label="Primary Font Color"
-                  name="theme-option-primary-font-color"
+                  name={`theme-option-primary-font-color-${locale}`}
                   defaultValue={theme.options.primaryFontColor}
                 />
               </li>
               <li className="ml-6">
                 <ColorSelector
                   label="Primary Font Color(Active)"
-                  name="theme-option-active-primary-font-color"
+                  name={`theme-option-active-primary-font-color-${locale}`}
                   defaultValue={theme.options.primaryFontColorActive}
                 />
               </li>
               <li className="ml-6">
                 <ColorSelector
                   label="Secondary Font Color"
-                  name="theme-option-secondary-font-color"
+                  name={`theme-option-secondary-font-color-${locale}`}
                   defaultValue={theme.options.secondaryFontColor}
                 />
               </li>
               <li className="ml-6">
                 <ColorSelector
                   label="Secondary Font Color(Active)"
-                  name="theme-option-active-secondary-font-color"
+                  name={`theme-option-active-secondary-font-color-${locale}`}
                   defaultValue={theme.options.secondaryFontColorActive}
                 />
               </li>
@@ -125,14 +131,14 @@ export const ThemeEditorSection = ({ theme }: { theme: Theme }) => {
               <li className="ml-6">
                 <ColorSelector
                   label="Background Color"
-                  name="theme-button-bgColor"
+                  name={`theme-button-bgColor-${locale}`}
                   defaultValue={theme.buttons.bgColor}
                 />
               </li>
               <li className="ml-6">
                 <ColorSelector
                   label="Primary Font Color"
-                  name="theme-button-primary-font-color"
+                  name={`theme-button-primary-font-color-${locale}`}
                   defaultValue={theme.buttons.primaryFontColor}
                 />
               </li>

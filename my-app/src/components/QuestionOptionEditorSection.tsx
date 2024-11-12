@@ -2,9 +2,11 @@ import { InputSection } from '@/components/InputSection';
 
 export const QuestionOptionEditorSection = ({
   questionId,
+  locale,
   options,
 }: {
   questionId: string;
+  locale: string;
   options: Option[];
 }) => {
   return (
@@ -23,7 +25,7 @@ export const QuestionOptionEditorSection = ({
                   <li className="ml-6">
                     <InputSection
                       label="Title"
-                      name={`${questionId}-option-${index}-content`}
+                      name={`${questionId}-option-${index}-content-${locale}`}
                       defaultValue={optionConfig.content}
                     />
                   </li>
@@ -32,7 +34,7 @@ export const QuestionOptionEditorSection = ({
                   <li className="ml-6">
                     <InputSection
                       label="Desc"
-                      name={`${questionId}-option-${index}-description`}
+                      name={`${questionId}-option-${index}-description-${locale}`}
                       defaultValue={optionConfig.description}
                     />
                   </li>
@@ -41,7 +43,7 @@ export const QuestionOptionEditorSection = ({
                   <li className="ml-6">
                     <InputSection
                       label="Placeholder"
-                      name={`${questionId}-option-${index}-placeholder`}
+                      name={`${questionId}-option-${index}-placeholder-${locale}`}
                       defaultValue={optionConfig.placeholder}
                     />
                   </li>

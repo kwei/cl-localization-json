@@ -14,6 +14,7 @@ export const EditorContainer = () => {
     <EditorTemplate
       key={`${template.surveyId}-${locale}`}
       show={selection === locale}
+      locale={locale}
       template={template[locale]}
     />
   ));
