@@ -41,10 +41,18 @@ interface Theme {
   };
   options: OptionTheme;
   buttons: {
-    bgColor: string;
-    primaryFontColor: string;
+    button: ButtonTheme;
+    backButton: ButtonTheme;
   };
 }
+
+type ButtonTheme = {
+  bgColor: string;
+  bgColorHover: string;
+  bgColorDisabled: string;
+  primaryFontColor: string;
+  disabledFontColor: string;
+};
 
 type OptionTheme = {
   bgColor: string;

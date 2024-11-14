@@ -132,14 +132,75 @@ export const ThemeEditorSection = ({
                 <ColorSelector
                   label="Background Color"
                   name={`theme-button-bgColor-${locale}`}
-                  defaultValue={theme.buttons.bgColor}
+                  defaultValue={theme.buttons.button.bgColor}
                 />
               </li>
               <li className="ml-6">
                 <ColorSelector
                   label="Primary Font Color"
-                  name={`theme-button-primary-font-color-${locale}`}
-                  defaultValue={theme.buttons.primaryFontColor}
+                  name={`theme-button-hover-bgColor-${locale}`}
+                  defaultValue={theme.buttons.button.bgColorHover}
+                />
+              </li>
+              <li className="ml-6">
+                <ColorSelector
+                  label="Primary Font Color"
+                  name={`theme-button-disable-bgColor-${locale}`}
+                  defaultValue={theme.buttons.button.bgColorDisabled}
+                />
+              </li>
+              <li className="ml-6">
+                <ColorSelector
+                  label="Primary Font Color"
+                  name={`theme-button-font-color-${locale}`}
+                  defaultValue={theme.buttons.button.primaryFontColor}
+                />
+              </li>
+              <li className="ml-6">
+                <ColorSelector
+                  label="Primary Font Color"
+                  name={`theme-button-disable-font-color-${locale}`}
+                  defaultValue={theme.buttons.button.disabledFontColor}
+                />
+              </li>
+            </ul>
+            <label className="font-semibold">Back Button Styles</label>
+            <ul className="flex w-full list-disc flex-col gap-2">
+              <li className="ml-6">
+                <ColorSelector
+                  label="Background Color"
+                  name={`theme-back-button-bgColor-${locale}`}
+                  defaultValue={theme.buttons.backButton.bgColor}
+                />
+              </li>
+              <li className="ml-6">
+                <ColorSelector
+                  label="Primary Font Color"
+                  name={`theme-back-button-hover-bgColor-${locale}`}
+                  defaultValue={theme.buttons.backButton.bgColorHover}
+                />
+              </li>
+              <li className="ml-6">
+                <ColorSelector
+                  label="Primary Font Color"
+                  name={`theme-back-button-disable-bgColor-${locale}`}
+                  defaultValue={theme.buttons.backButton.bgColorDisabled}
+                />
+              </li>
+              <li className="ml-6">
+                <ColorSelector
+                  label="Primary Font Color"
+                  name={`theme-back-button-font-color-${locale}`}
+                  defaultValue={theme.buttons.backButton.primaryFontColor}
+                />
+              </li>
+              <li className="ml-6">
+                <ColorSelector
+                  label="Primary Font Color"
+                  name={`theme-back-button-disable-font-color-${locale}`}
+                  defaultValue={
+                    theme.buttons.backButton.disabledFontColor
+                  }
                 />
               </li>
             </ul>

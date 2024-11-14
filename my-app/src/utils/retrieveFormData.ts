@@ -127,13 +127,46 @@ function getThemeData(
       `theme-option-active-secondary-font-color-${locale}`,
     ) as string) ?? originalTheme.options.secondaryFontColorActive
   ).toUpperCase();
-  theme.buttons.bgColor = (
+  theme.buttons.button.bgColor = (
     (formData.get(`theme-button-bgColor-${locale}`) as string) ??
-    originalTheme.buttons.bgColor
+    originalTheme.buttons.button.bgColor
   ).toUpperCase();
-  theme.buttons.primaryFontColor = (
-    (formData.get(`theme-button-primary-font-color-${locale}`) as string) ??
-    originalTheme.buttons.primaryFontColor
+  theme.buttons.button.bgColorHover = (
+    (formData.get(`theme-button-hover-bgColor-${locale}`) as string) ??
+    originalTheme.buttons.button.bgColorHover
+  ).toUpperCase();
+  theme.buttons.button.bgColorDisabled = (
+    (formData.get(`theme-button-disable-bgColor-${locale}`) as string) ??
+    originalTheme.buttons.button.bgColorDisabled
+  ).toUpperCase();
+  theme.buttons.button.primaryFontColor = (
+    (formData.get(`theme-button-font-color-${locale}`) as string) ??
+    originalTheme.buttons.button.primaryFontColor
+  ).toUpperCase();
+  theme.buttons.button.disabledFontColor = (
+    (formData.get(`theme-button-disable-font-color-${locale}`) as string) ??
+    originalTheme.buttons.button.disabledFontColor
+  ).toUpperCase();
+  theme.buttons.backButton.bgColor = (
+    (formData.get(`theme-back-button-bgColor-${locale}`) as string) ??
+    originalTheme.buttons.backButton.bgColor
+  ).toUpperCase();
+  theme.buttons.backButton.bgColorHover = (
+    (formData.get(`theme-back-button-hover-bgColor-${locale}`) as string) ??
+    originalTheme.buttons.backButton.bgColorHover
+  ).toUpperCase();
+  theme.buttons.backButton.bgColorDisabled = (
+    (formData.get(`theme-back-button-disable-bgColor-${locale}`) as string) ??
+    originalTheme.buttons.backButton.bgColorDisabled
+  ).toUpperCase();
+  theme.buttons.backButton.primaryFontColor = (
+    (formData.get(`theme-back-button-font-color-${locale}`) as string) ??
+    originalTheme.buttons.backButton.primaryFontColor
+  ).toUpperCase();
+  theme.buttons.backButton.disabledFontColor = (
+    (formData.get(
+      `theme-back-button-disable-font-color-${locale}`,
+    ) as string) ?? originalTheme.buttons.backButton.disabledFontColor
   ).toUpperCase();
 
   return theme;

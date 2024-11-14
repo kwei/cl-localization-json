@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98ca40c4-25ac-4af3-91fb-091f687a58cf" name="Changes" comment="Add generate all button">
+    <list default="true" id="98ca40c4-25ac-4af3-91fb-091f687a58cf" name="Changes" comment="Make color code to be upper case">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/ThemeEditorSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ThemeEditorSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/types/type.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/types/type.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/utils/retrieveFormData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/utils/retrieveFormData.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -223,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731397028008</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Make color code to be upper case">
+      <option name="closed" value="true" />
+      <created>1731568930861</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1731568930861</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +253,7 @@
     <MESSAGE value="Refine UI" />
     <MESSAGE value="Refine template getting logic" />
     <MESSAGE value="Add generate all button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add generate all button" />
+    <MESSAGE value="Make color code to be upper case" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make color code to be upper case" />
   </component>
 </project>
